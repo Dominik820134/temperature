@@ -10,7 +10,7 @@ public class Temperature{
         int brojPovisenih = 0;
         double najniza = Double.MAX_VALUE;
         double najvisa = -Double.MIN_VALUE;
-        int suma = 0;
+        double suma = 0.0;
 
         System.out.println("Unesi temperature u Celzijevim stupnjevima, 0 za kraj.");
 
@@ -45,11 +45,11 @@ public class Temperature{
         else{
             double prosjek = suma / brojMjerenja;
 
-            System.out.printf("Broj mjerenja: %n", + brojMjerenja);
+            System.out.printf("Broj mjerenja: %.0f%n", brojMjerenja);
             System.out.printf("Najniza: %.2f °C%n", najniza);
             System.out.printf("Najveća: %.2f °C%n", najvisa);
             System.out.printf("Prosjek: %.2f °C%n", prosjek);
-            System.out.printf("Broj povisenih mjerenja: %n", + brojPovisenih);
+            System.out.printf("Broj povisenih mjerenja: %d%n", brojPovisenih);
 
             if(brojPovisenih > 0){
                 System.out.println("Povisena temperatura je zabilježena.");
